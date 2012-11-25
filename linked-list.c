@@ -1,6 +1,6 @@
 #include "linked-list.h"
 #include <stdio.h>
-#include <stdio.h>
+#include <stdlib.h>
 
 void print_node(node *print) {
     printf("Key: %d Value: %d Next: %d Address: %d\n",
