@@ -1,3 +1,10 @@
+#include "linked-list.h"
+
+void test_fn(node *current) {
+	    current->value += 1;
+}
+
+
 int main() {
     node *root;
     root = node_new(rand());

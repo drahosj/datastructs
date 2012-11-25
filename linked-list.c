@@ -1,11 +1,6 @@
+#include "linked-list.h"
 #include <stdio.h>
-#include <stdlib.h>
-
-typedef struct ListNode {
-    int key;
-    int value;
-    struct ListNode *next;
-} node;
+#include <stdio.h>
 
 void print_node(node *print) {
     printf("Key: %d Value: %d Next: %d Address: %d\n",
@@ -14,11 +9,6 @@ void print_node(node *print) {
             print->next,
             print);
 }
-
-void test_fn(node *current) {
-    current->value += 1;
-}
-
 
 node * find_last(node *node) {
     return node->next == 0 ? node : find_last(node->next);
@@ -49,7 +39,7 @@ node * list_search(node *current, int key) {
         return list_search(current->next, key);
 }
 
-void list_each(node *current, void (*func)(node *)){
+void list_each(node *current, void (*func)(node *)) {
     func(current);
     if (current->next == 0)
         return;
